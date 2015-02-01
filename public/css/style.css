@@ -1,0 +1,286 @@
+@font-face
+{
+    font-family: maries;
+    src:url('fonts/lcallig.ttf');
+}
+
+@font-face
+{
+    font-family: maries_eot;
+    src:url('fonts/lcallig.eot'); 
+}
+
+#logo
+{
+    padding:10px 0px 0px 0px;
+    height:80px;
+}
+
+#tlb
+{
+    height:80px;
+    float:left;   
+}
+
+#trb
+{
+    height:80px;
+    float:right;   
+}
+
+#blb
+{
+    height:80px;
+    float:left;   
+}
+
+#brb
+{
+    height:80px;
+    float:right;   
+}
+
+
+body
+{
+    margin:0px;
+    padding:0px;
+    background-color:#fffccc;
+    background-image: url('../images/template/bg_256x256.png');
+    color:#660000;
+    font-family: arial, sans-serif;
+    min-width:960px;
+    min-height:600px;
+   
+}
+
+#site-name
+{
+    padding-top:10px;
+}
+
+#logo1
+{
+    float:left;
+    position:relative;
+    vertical-align: top;
+    width:35%;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    margin:5px;
+    /*font-family: maries;*/
+}
+
+.title {
+    font-family:maries;
+    /*font-size: 2.3em;*/
+    /*font-weight:normal;*/
+}
+
+h1{font-size:2em;}
+
+#header, footer
+{
+    /*background-color:  #660000;*/
+    z-index: 1;
+    margin:0px;
+    /*color:#fffccc;*/
+    color:#660000;
+    width:100%;
+    position: fixed;
+}
+
+footer
+{
+    height:80px;
+    bottom:0px;
+}
+
+footer strong
+{
+    display:block;padding:35px 120px 0px 155px;font-size:0.8em;text-align: right;
+}
+
+#header, footer
+{
+    min-width:960px;
+}
+
+#header h1{font-family:maries;font-size:3.5em;font-weight: normal;}
+
+#header a,footer a
+{
+    text-decoration: none;
+    color:#660000;
+    
+}
+footer{}
+
+#header a:hover,footer a:hover
+{
+    text-decoration:none;
+    color:#f00;
+}
+
+
+#navbaroque
+{
+   display:block;
+   width:410px;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:5px;
+   margin:0px auto 0px auto;
+}
+
+#navbaroque img
+{
+    margin-top:17px;
+}
+
+#nr{float:right;}
+#nl{float:left;}
+
+nav
+{
+    border-top:2px solid #660000;
+    border-bottom:2px solid #660000;
+    width:350px;/*30%*/
+    margin:15px auto 0px auto;
+    padding:0px;
+    text-align: center;
+    font-size:.8em;
+}
+
+nav ul
+{
+    margin:5px 0px;
+}
+
+nav li
+{
+    margin:0px;
+    padding:0px 15px 0px 0px;
+    display: inline;
+}
+
+barogue_tl,bargue_bl{float:left;}
+barogue_tr,bargue_b3{float:right;}
+
+
+#main
+{ 
+    position:relative;
+    top:200px;
+    max-width: 960px;
+    margin: 0px auto 0px auto;
+    overflow:auto;
+}
+
+#textbox, article
+{
+    margin:5px 10px 0px 37%;
+    padding:0px 15px 0px 15px;
+    /*float:right;*/
+    
+}
+
+#textbox
+{
+    /*margin-left:65%;*/
+}
+
+/* list styling */
+ul
+{
+    margin-left:35px;
+}
+li{margin-left:45px;}
+
+
+.button, fieldset, input, textarea, .form_error
+{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border:0px;
+}
+
+input, textarea
+{
+    padding:4px;
+    margin:2px 8px 6px 0px;
+    font-family: arial, sans-serif;
+}
+
+.form
+{
+    
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+     
+    border-radius: 15px;
+    margin-top:20px;
+    margin-right:20px;
+    padding:20px;
+    background-color:#660000;
+    color:#fff;
+   behavior: url(/libs/pie/PIE.htc);
+}
+
+.form
+{
+    float:left;
+}
+
+
+/* Form Errors */
+.form_error
+{
+    background-color: #f99;
+    border:2px solid #f00;
+    color:#000;
+    margin:3px 0px 3px 0px;
+}
+.form p
+{
+    margin: 0px 0px 0px 0px;
+   
+}
+
+.form label
+{
+    display:block;
+    margin:10px 0px 0px 0px;
+}
+
+.success label
+{
+    display:inline-block;
+    text-align: right;
+    width:125px;
+    vertical-align: top;
+}
+.success pre
+{
+    display: inline-block;
+    margin-top:0px;
+    font-family: arial, sans-serif;
+}
+
+.contactus h1,
+{
+    
+}
+
+.contactus
+{
+    margin-left:30%;
+}
+
+.contactus p
+{
+    margin:0px 0px 12px 0px;
+}
