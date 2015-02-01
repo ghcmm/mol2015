@@ -1,0 +1,35 @@
+<?php $__env->startSection('content'); ?>
+    <main>
+        <article>
+            <h1 class="title">Our Services</h1>
+            <p>Below is a list of our services and with prices. If what your are looking for is not listed, please do not hesitate to contacts us with your requirements.</p>   
+            <div class="services" style="margin-left:25px;">
+                
+                <?php $maincat=0; $subcat=0; ?>
+                
+                <?php foreach($services as $service): ?>
+                <?php if($service->cat_id<>$maincat): ?>
+                    <?php $maincat=$service->cat_id; ?>
+                    <h2 class="title" style="margin:25px 0px 5px 0px;"><?php echo $service->cats->name; ?></h2>
+                <?php endif; ?>
+                
+                <?php if($service->subcat_id<>$subcat): ?>
+                    <?php if($service->subcat_id!=0): ?>
+                        <?php $subcat=$service->subcat_id; ?>
+                        <h3 class="title" style="margin:10px 0px 5px 30px;"><?php echo $service->subcats->name; ?></h3>
+                    <?php else: ?>
+                        <?php $subcat=0; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
+                
+                    <span style="display:inline-block;margin-left:60px;width:200px;"><?php echo $service->service_name; ?></span>
+                    <span>£</span>
+                    <span style="display:inline-block;width:60px;text-align:right;"><?php echo number_format($service->price,2); ?></span>
+                    <br/>
+               <?php endforeach; ?> 
+            </div>
+        </article>
+    </main>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('_layout.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

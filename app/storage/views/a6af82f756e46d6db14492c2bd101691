@@ -1,0 +1,24 @@
+<?php $__env->startSection('content'); ?>
+    
+<?php echo var_dump($test_data); ?>
+
+<?php echo Form::open(array('route'=>'admin.blocks.bert','method'=>'get')); ?>
+
+<?php if(isset($test_data['button'])): ?>
+    <?php echo 'Button Ticked'; ?>
+
+<?php else: ?>
+    <?php echo 'Button not ticked'; ?>
+
+<?php endif; ?>
+<?php echo Form::checkbox('button'); ?>
+
+
+<?php echo Form::submit(); ?>
+
+<?php echo Form::close(); ?>
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

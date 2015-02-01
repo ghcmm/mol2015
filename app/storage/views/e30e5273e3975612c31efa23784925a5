@@ -1,0 +1,22 @@
+<?php $__env->startSection('content'); ?>
+    
+    <div>
+      
+        <?php echo Form::model($category,array('route'=>array('admin.categories.update',$category->id),'method'=>'put','class'=>'form')); ?>
+
+        
+        <h2>Edit Service</h2>
+    
+        <?php echo $__env->make('admin._blocks.cats_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        
+        <div style="margin-top:10px;">
+            <?php echo Form::submit('Update',array('class'=>'button')); ?>
+
+        </div>
+        
+        <?php echo Form::close(); ?>
+
+    
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

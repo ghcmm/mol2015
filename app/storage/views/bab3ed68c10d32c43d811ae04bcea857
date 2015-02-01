@@ -1,0 +1,31 @@
+<?php $__env->startSection('content'); ?>
+    <main>
+        <?php echo HTML::image('images/logo/shop512x579_drawing2.png','Mareis of Ludlow', array('class'=>'logo1')); ?>
+
+        <div>
+            <article id="textbox" style="text-align: center;padding:25px 0px 0px 0px;margin-left:350px;">
+                <p>	
+                    <h1 class="title" style="padding-bottom:0px;margin-bottom:0px;">Welcome to Maries of Ludlow</h1>
+                    <p style="margin:0px;font-size:1.3em;font-weight:bold;">Clothing alteration services and Haberdashery  in Ludlow and  the surrounding areas.</p>
+                </p>
+                <?php if(count($blocks)>0): ?>
+                    <?php foreach($blocks as $block): ?>
+                    <div class="display_block" style="margin:0px 0px 5px 0px;">
+                        <?php echo $block->block_text;; ?>    
+                    </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <p>
+                    <h3>Monday to Friday</h3>
+                    <h2>9.15am to 5.00pm</h2>
+                    <h3>Saturday</h3>
+                    <h2>10.00am to 4.00pm</h2>
+                </p>
+                <br/>
+            </article>
+        </div>
+    </main>
+    
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('_layout.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

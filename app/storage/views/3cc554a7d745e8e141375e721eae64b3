@@ -1,0 +1,9 @@
+<?php echo Form::label('name','Category Title'); ?>
+
+<?php echo Form::text('name',null,array('size'=>'40')); ?>
+
+
+<?php echo Form::label('description','Category Description (Optional)'); ?>
+
+<?php echo Form::textarea('descritption',null,array('cols'=>'45')); ?>
+

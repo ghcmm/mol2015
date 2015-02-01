@@ -1,0 +1,48 @@
+    <?php echo Form::label('firstname','First Name * '.$errors->first('firstname','Required')); ?>
+
+    <?php echo Form::text('firstname',null,array('size'=>26)); ?>
+
+    
+    
+    <?php echo Form::label('lastname','Last Name * '.$errors->first('lastname','Required')); ?>
+
+    <?php echo Form::text('lastname',null,array('size'=>26)); ?>
+
+    
+    
+    <?php echo Form::label('address','Address'); ?>
+
+    <?php echo Form::textarea('address',null,array('rows'=>5,'style'=>'width:95%;')); ?>
+
+    
+    <?php echo Form::label('postcode','Post Code'); ?>
+
+    <?php echo Form::text('postcode',null,array('size'=>20)); ?>
+
+    
+    <?php echo Form::label('phone','Phone Number * '.$errors->first('phone','Required')); ?>
+
+    <?php echo Form::text('phone',null,array('size'=>20)); ?>
+
+    	
+    <?php echo Form::label('mobile','Mobile Number'); ?>
+
+    <?php echo Form::text('mobile',null,array('size'=>20)); ?>
+
+    
+    <?php echo Form::label('email','Email Address * '.$errors->first('email','Required')); ?>
+
+    <?php echo Form::email('email',null,array('size'=>40)); ?>
+
+    
+    <?php echo Form::label('message','Your message for Marie * '.$errors->first('message','Required')); ?>
+
+    <?php echo Form::textarea('message',null,array('rows'=>5,'style'=>'width:95%;')); ?>
+
+    <div> 
+        <?php echo Form::submit('Submit your message',array('class'=>'button')); ?>
+
+        <?php echo Form::reset('Clear form',array('class'=>'button')); ?>
+
+    </div>
+    

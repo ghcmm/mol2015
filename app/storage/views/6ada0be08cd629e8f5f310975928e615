@@ -1,0 +1,19 @@
+<?php $__env->startSection('content'); ?>
+
+<h2>fjkdfklsfdkls</h2>
+<div>
+<?php echo Form::open(array('route'=>array('admin.blocks'),'method'=>'post','class'=>'form')); ?>
+
+<?php echo $__env->make('admin._blocks.blocks_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<div style="margin:10px 0px 0px 0px;">
+<?php echo Form::submit('Add Block',array('class'=>'buttons')); ?>
+
+<?php echo Form::reset('Clean Form',array('class'=>'buttons')); ?>
+
+</div>
+<?php echo Form::close(); ?>
+
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

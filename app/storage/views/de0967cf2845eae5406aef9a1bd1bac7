@@ -1,0 +1,49 @@
+<?php $__env->startSection('content'); ?>
+    
+    <div style="float:right;vertical-align:top;">
+      
+        <?php echo Form::model($cat_edit,array('class'=>'form','route'=>array('admin.services.categories.update',$cat_edit->id),'method'=>'put')); ?>
+
+        
+        <h2>Add a new Category</h2>
+        
+        <?php echo $__env->make('admin.services._particles.cats_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        
+        <div style="margin-top:10px;">
+            <?php echo Form::submit('Update',array('class'=>'button')); ?>
+
+        </div>
+        
+        <?php echo Form::close(); ?>
+
+    
+    </div>
+    
+    
+    <div>
+    <h2>Available Categories</h2>
+    <table>
+    <?php foreach($cats as $cat): ?>
+        <tr>
+            <td style="padding-right:15px;"><?php echo $cat->name; ?></td>
+            <td class="buttons">
+                <?php echo link_to_route('admin.services.categories.edit','Edit',array($cat->id),array('class'=>'buttons')); ?>
+
+            </td>
+            <td class="buttons">
+                
+                <?php echo Form::open(array('route'=>array('admin.services.categories.destroy',$cat->id), 'method'=>'delete')); ?>
+
+                <?php echo Form::submit('Delete',array('class'=>'buttons')); ?>
+
+                <?php echo Form::close(); ?>
+
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </table>
+    </div>
+    
+   
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

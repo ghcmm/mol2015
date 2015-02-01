@@ -1,0 +1,25 @@
+<?php $__env->startSection('content'); ?>
+    
+    <div>  
+        <?php echo Form::open(array('route'=>array('admin.services'),'method'=>'post','class'=>'form')); ?>
+
+        
+        <h2>Add a new Service</h2>
+        
+        <?php echo $__env->make('admin._blocks.services_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        
+        <div style="margin-top:10px;">
+            <?php echo Form::submit('Add New Service',array('class'=>'button')); ?>
+
+        </div>
+        
+        <?php echo Form::close(); ?>
+
+    
+    </div>
+    </div>
+    
+    
+        
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

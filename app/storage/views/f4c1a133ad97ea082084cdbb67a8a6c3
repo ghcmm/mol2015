@@ -1,0 +1,25 @@
+<?php $__env->startSection('content'); ?>
+    
+    
+    
+    <h2>CK Editor</h2>
+        
+    <?php echo Form::label('lastname','Last Name * '.$errors->first('lastname','Required')); ?>
+
+    <?php echo Form::text('lastname',null,array('size'=>26)); ?><br/>
+    
+    
+    <?php echo Form::label('address','Address'); ?>
+
+    
+    <?php echo Form::textarea('address',null,array('rows'=>5,'cols'=>40,'class'=>'ckeditor')); ?>
+
+   
+    <div> 
+        <?php echo Form::submit('Submit your message',array('class'=>'button')); ?>
+
+        <?php echo Form::reset('Clear form',array('class'=>'button')); ?>
+
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_layout.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,20 @@
+<?php echo Form::label('user_name','User Name'); ?>
+
+<?php echo $errors->first('username'); ?>
+
+<?php echo Form::text('username',null,array('size'=>'40')); ?>
+
+
+<?php echo Form::label('email','Email address'); ?>
+
+<?php echo $errors->first('email'); ?>
+
+<?php echo Form::text('email',null,array('size'=>'40')); ?>
+
+
+<?php echo Form::label('password','Enter a password'); ?>
+
+<?php echo $errors->first('password'); ?>
+
+<?php echo Form::password('password',null,array('size'=>'40')); ?>
+

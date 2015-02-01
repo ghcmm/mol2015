@@ -1,0 +1,16 @@
+<?php $__env->startSection('content'); ?>
+    <h1>Create a  Users Account</h1>
+        
+    <?php echo Form::open(array('route'=>array('admin.users'),'method'=>'post','class'=>'form')); ?>
+
+   
+    <?php echo $__env->make('admin._blocks.users_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    
+    
+    <?php echo Form::submit('Add user',array('class'=>'button')); ?>
+
+    <?php echo Form::close(); ?>
+
+    
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

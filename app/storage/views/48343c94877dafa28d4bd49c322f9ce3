@@ -1,0 +1,18 @@
+<?php echo Form::label('service_title','Service Title'); ?>
+
+<?php echo Form::text('service',null,array('size'=>'40')); ?>
+
+
+<?php echo Form::label('price','Price'); ?>
+
+£ <?php echo Form::number('price',null,array('size'=>'45')); ?>
+
+
+<?php echo Form::label('main_category','Main category'); ?>
+
+<?php echo Form::select('cat_id', array('default' => 'Please Select') + $cats_list, 'default'); ?>
+
+
+<?php echo Form::label('sub_category','Sub Category (optional)'); ?>
+
+<?php echo Form::select('subcat_id', array('default' => 'None') + $cats_list, 'default'); ?>

@@ -1,0 +1,13 @@
+<?php echo Form::label('name','Category Title'); ?>
+
+<?php echo $errors->first('name'); ?>
+
+<?php echo Form::text('name',null,array('size'=>'40')); ?>
+
+
+<?php echo Form::label('description','Category Description (Optional)'); ?>
+
+<?php echo $errors->first('description'); ?>
+
+<?php echo Form::textarea('descritption',null,array('style'=>'width:95%')); ?>
+
