@@ -3,7 +3,6 @@
 @section('content')
    
     <main>
-        {{ HTML::image('images/logo/shop512x579_drawing2.png','Mareis of Ludlow', array('class'=>'logo1')) }}
         <div>
             <article id="textbox">
                 <h1 class="title">About Marie</h1>

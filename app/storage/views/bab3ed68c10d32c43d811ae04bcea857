@@ -1,29 +1,16 @@
-<?php $__env->startSection('content'); ?>
+<?php $__env->startSection('content'); ?>        
     <main>
-        <?php echo HTML::image('images/logo/shop512x579_drawing2.png','Mareis of Ludlow', array('class'=>'logo1')); ?>
-
-        <div>
-            <article id="textbox" style="text-align: center;padding:25px 0px 0px 0px;margin-left:350px;">
-                <p>	
-                    <h1 class="title" style="padding-bottom:0px;margin-bottom:0px;">Welcome to Maries of Ludlow</h1>
-                    <p style="margin:0px;font-size:1.3em;font-weight:bold;">Clothing alteration services and Haberdashery  in Ludlow and  the surrounding areas.</p>
-                </p>
-                <?php if(count($blocks)>0): ?>
-                    <?php foreach($blocks as $block): ?>
-                    <div class="display_block" style="margin:0px 0px 5px 0px;">
-                        <?php echo $block->block_text;; ?>    
-                    </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-                <p>
-                    <h3>Monday to Friday</h3>
-                    <h2>9.15am to 5.00pm</h2>
-                    <h3>Saturday</h3>
-                    <h2>10.00am to 4.00pm</h2>
-                </p>
-                <br/>
-            </article>
-        </div>
+        <img src="images/shop.jpg" alt="picture of shop" class="image-wrapper cream-faded-bg" style="float:left;width:350px;"/>
+        <article class="cream-faded-bg" style="margin-left:400px;">
+            <h1>WELCOME TO MARIES</h1>
+            <p>Marie, a Ludlow local, with over 30 years dressmaking experience, is now offering specialised alteration and tailoring services for both men and women's clothing. Marie's reputation is widespread throughout the town. Many of Ludlow's clothing establishments send their customers to Marie so she and her team are more than qualified to deal with your alteration needs. Marie and her small team always aim to provide a professional and efficient service. Whether you need your jeans, trousers or dresses shortened, your suits tailored or your sleeves shortened, you are in safe and experienced hands. If you are too busy to visit Marie in person and know your requirements, a postal service is available.</p>
+            <p>Marie also can supply you with any James Hare Silks  and Art Gallery Fabrics to order.</p>
+            <p>Marie is also an agent for Priory Cleaners.</p>
+            <p>To discuss your requirements, place a James Hare Silks / Art Gallery Fabrics order or to find out more about Priory Cleaners dry cleaning, please feel free to contact Marie today by</p>
+            <h2>Telephone 01584 318185</h2>
+            <h3>Email <a href="mailto:mareis@mariesofludlow.co.uk">marie&amp;mariesofludlow.co.uk</a></h3>
+            <h3>Or use our online <a href="mailto:mareis@mariesofludlow.co.uk">Contact Us form</a></h3>
+        </article>
     </main>
     
 <?php $__env->stopSection(); ?>
