@@ -10,7 +10,7 @@
             
             {{Form::close()}}
         </div>
-        <article class="contactus" style="margin-left:42%;">
+        <article class="contactus" style="margin-left:420px;">
             <h1 class="title">How to contact</h1>
             <p>You can contact Marie on any of the following. If you prefer you can also contact Marie by filling out the online form on the left of this page</p>
             <div style="text-align: center"><br/>
