@@ -147,6 +147,7 @@ textarea, input
     padding:3px;
     font-size:14px;
     margin:3px 0px 0px 0px;
+    border:1px solid #666;
 }
 
 form label
@@ -159,7 +160,7 @@ form label
 
 .form_err
 {
-    border:2px solid #f00;
+    border:1px solid #f00;
     background: #fbb;
 }
 
