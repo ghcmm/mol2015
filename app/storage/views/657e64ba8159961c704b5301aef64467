@@ -1,13 +1,9 @@
 <?php $__env->startSection('content'); ?> 
-    <div>
-    
-        <div>
-            <h2 style="display:inline-block;margin-right:15px;">Available Services</h2>
-            <?php echo link_to_route('admin.services.create','Add a new service',NULL,array('class'=>'buttons')); ?>
-
+        <div class="header-link-box">
+            <div class="heading">SERVICES</div>
+            <div class="link"><?php echo link_to_route('admin.services.create','Add a new service'); ?></div>
         </div>
-        <br/>
-        <div style="height:125px;">
+        <div class="table-box">
             <table>
                 <tr style="text-align:left"><th>Service</th><th>Price</th><th>Main Category</th><th>Sub Category</th></tr>
                 <?php foreach($services as $service): ?>
@@ -20,15 +16,13 @@
                         <?php else: ?>
                             <td style="padding-right:15px;">Not set</td>
                         <?php endif; ?>     
-                        <td>
+                        <td class="butcol">
                             <?php echo link_to_route('admin.services.edit','Edit',array($service->id),array('class'=>'buttons')); ?>
 
-                        </td>
-                        <td>
                             
-                            <?php echo Form::open(array('route'=>array('admin.services.destroy',$service->id), 'method'=>'delete')); ?>
+                            <?php echo Form::open(array('route'=>array('admin.services.destroy',$service->id), 'method'=>'delete','class'=>'del-butt-form')); ?>
 
-                            <?php echo Form::submit('Delete',array('class'=>'buttons')); ?>
+                            <?php echo Form::submit('Delete',array('class'=>'del-button')); ?>
 
                             <?php echo Form::close(); ?>
 
@@ -38,7 +32,5 @@
                 <?php endforeach; ?>
             </table>
         </div>
-    </div>
-        
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

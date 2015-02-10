@@ -1,8 +1,9 @@
 <header class="cream-faded-bg">
     {{html::image('images/logo/logo-black.png','Maries Logo',array('style'=>'float:left'))}}
         <h1>MARIES</h1>
-        <div style="display:inline-block;vertical-align: top; margin-left:50px;">
-            opening hours
+        <div class="infobox">
+          <span>Telphone : 01584 318185</span>
+	   <span>Email : <a href="mailto:marie@mariesofludlow.co.uk">marie@mariesofludlow.co.uk</a></span>
         </div>
 </header>
 <nav>

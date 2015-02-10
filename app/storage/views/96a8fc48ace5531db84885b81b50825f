@@ -1,11 +1,11 @@
 <?php echo Form::label('service_title','Service Title'); ?>
 
-<?php if($errors->first('service')): ?>
-    <?php echo $errors->first('service'); ?><br/>
-    <?php echo Form::text('service',null,array('size'=>'40','class'=>'form_error')); ?>
+<?php if($errors->first('service_name')): ?>
+    <?php echo $errors->first('service_name'); ?><br/>
+    <?php echo Form::text('service_name',null,array('size'=>'40','class'=>'form_error')); ?>
 
 <?php else: ?>
-    <?php echo Form::text('service',null,array('size'=>'40')); ?>
+    <?php echo Form::text('service_name',null,array('size'=>'40')); ?>
 
 <?php endif; ?>
 

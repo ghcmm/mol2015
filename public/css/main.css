@@ -42,9 +42,8 @@ background: linear-gradient(to bottom,  rgba(255,252,207,0.8) 0%,rgba(255,255,20
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccfffccf', endColorstr='#ccffffcc',GradientType=0 ); /* IE6-8 */
 }
 
-dark-green, form, nav a:hover
+dark-green, form, nav a:hover, .display_block
 {
-    background:#092509;
     background:#394541
 }
 
@@ -92,6 +91,37 @@ header img
     height:90px;
 }
 
+header .infobox
+{
+    display:inline-block;
+    vertical-align: top;
+    margin-left:50px;
+    
+}
+
+header .infobox span
+{
+    display: block;
+    margin:6px 0px;
+    font-family: maries;
+    font-size:22px;
+    font-weight: bold;
+    
+}
+
+header .infobox a:hover
+{
+    color:#1B9C29 /*#394541*/
+}
+
+header .infobox a
+{
+    text-decoration: none;
+   
+    font-weight:bold;
+    color:#000;
+}
+
 nav{margin:15px 5px 10px 15px;}
 nav a
 {
@@ -119,6 +149,13 @@ main
     max-width:960px;
     margin:45px  auto;
     color:#000;
+}
+
+.display_block
+{
+    color:#fff;
+    padding:10px 15px;
+    margin:5px 0px;
 }
 
 article

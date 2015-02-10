@@ -19,6 +19,8 @@ class CreateBlocksTable extends Migration {
 			$table->text('block_text');
 			$table->boolean('block_active');
 			$table->integer('block_index');
+			$table->boolean('notice');
+			$table->integer('page_id');
 			$table->timestamps();
 		});
 	}
