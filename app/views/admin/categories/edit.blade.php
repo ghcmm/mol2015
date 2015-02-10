@@ -2,7 +2,7 @@
 
 @section('content')
     
-    <div>
+   <div class="green-box" style="width:350px;margin:100px auto 0px  auto;">
       
         {{Form::model($category,array('route'=>array('admin.categories.update',$category->id),'method'=>'put','class'=>'form'))}}
         

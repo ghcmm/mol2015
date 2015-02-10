@@ -1,7 +1,5 @@
 <?php $__env->startSection('content'); ?>
-    
-    <div style="float:right;vertical-align:top;">
-      
+    <div class="green-box" style="width:350px;margin:100px auto 0px  auto;">
         <?php echo Form::model($service,array('route'=>array('admin.services.update',$service->id),'method'=>'put','class'=>'form')); ?>
 
         
@@ -18,18 +16,5 @@
 
     
     </div>
-    
-<?php foreach($cats_list as $key=>$cat): ?>
-<?php echo $cat; ?> : <?php echo $key; ?><br/>
-<?php endforeach; ?>
-
-<h2>Services</h2>
-
-<br/><br/>
-<?php echo $service->service; ?> : £<?php echo $service->price; ?><br/>
-<?php echo var_dump($service->cats); ?>
-
-
-
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

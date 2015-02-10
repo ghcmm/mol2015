@@ -6,7 +6,7 @@
         <div>
             <article id="textbox" style="text-align: center;padding:25px 0px 0px 0px;margin-left:350px;">
                 <p>	
-                    <h1 class="title" style="padding-bottom:0px;margin-bottom:0px;">Welcome to Maries of Ludlow</h1>
+                    <h2 class="title" style="padding-bottom:0px;margin-bottom:0px;">Welcome to Maries of Ludlow</h2>
                     <p style="margin:0px;font-size:1.3em;font-weight:bold;">Clothing alteration services and Haberdashery  in Ludlow and  the surrounding areas.</p>
                 </p>
                 @if(count($blocks)>0)

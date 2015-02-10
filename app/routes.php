@@ -56,8 +56,11 @@ Route::group(array('prefix'=>'admin','before'=>'auth'),function(){
 	Route::get('services/',array('as'=>'admin.services','uses'=>'AdminServicesController@index'));
 	
 	//Admin Blocks
+	
 	Route::resource('blocks','AdminBlocksController');
 	Route::get('blocks/',array('as'=>'admin.blocks','uses'=>'AdminBlocksController@index'));
+	Route::put('blocks/{id}/toggle',array('as'=>'admin.blocks.toggle','uses'=>'AdminBlocksController@toggle'));
+	
 	
 	
 	

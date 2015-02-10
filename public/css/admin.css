@@ -1,0 +1,226 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo);
+
+@font-face{
+    font-family: maries;
+    src:url('fonts/trajax.ttf');
+}
+
+nav, .main_menu, .box, .buttons, .header-link-box .link, .green-box
+{
+    background:#3B6351;/* Green background*/
+}
+
+
+th
+{
+    color:#3B6351;/* Green Text*/
+}
+
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: Arimo !important;
+    /*font-weight:normal;*/
+    margin:0px;
+    padding:0px;
+}
+
+
+body,textarea, input{ font-family: Arimo;}
+
+
+
+body
+{
+    margin:0px;
+    padding:0px; 
+}
+
+header
+{
+    /*padding:15px 15px 0px 15px; */
+    margin:0px;
+    background:#666;
+    color:#fff;
+}
+
+header h1
+{
+    font-weight: normal;
+    padding:10px 25px 5px 25px;
+    font-family: maries !important;
+   
+}
+
+#logo
+{
+    background: #fff;
+    color:#000;
+   
+}
+
+nav
+{
+    height:18px;
+    margin:0px;
+    padding:4px 0px 4px 25px;
+}
+
+nav a
+{
+    padding:0px 10px 0px 0px;
+    margin:5px;
+    text-decoration: none;
+    font-family: Arimo;
+    color:#fff;
+}
+
+nav a:hover
+{
+    /*background:#000;*/
+    color:#ff0;
+}
+.main_menu
+{
+    font-size:20px;
+    text-decoration:none;
+    color:#fff;
+    padding:5px 0px;
+    display:block;
+    width:250px;
+    text-align:center;
+    margin:5px auto;
+}
+    
+.main_menu:hover
+{
+    color:#ff0;
+}
+        
+main
+{
+    max-width:960px;
+    margin:45px  auto;
+    color:#000;
+}
+
+.header-link-box
+{
+    height: 35px;
+    padding:0px;
+    margin:0px 0px 15px 0px;
+}
+
+.header-link-box .heading
+{
+    color:#000;
+    font-weight:bold;
+}
+
+.header-link-box .link a
+{
+    text-decoration: none;
+    color:#fff;
+}
+.header-link-box .link a:hover
+{
+    text-decoration: none;
+    color:#ff0;
+}
+.header-link-box .link
+{
+    margin-left:-5px;
+}
+
+
+.header-link-box .link, .header-link-box .heading
+{
+    border:1px solid #000;
+    display:inline-block;
+    padding:5px 8px;
+}
+
+.box, .buttons
+{
+    color:#fff;
+}
+
+.buttons, .del-button
+{
+    border:1px solid #666;
+    padding: 2px 5px;
+    margin:0px;
+    text-decoration: none;
+    display: inline-block;
+    font-size:14px;
+}
+
+.del-button{
+    padding:2px 5px;
+    background: #900;
+    border-color: #600;
+    color:#fff;
+}
+
+.del-butt-form
+{
+    display: inline-block;
+    vertical-align: top;
+}
+    
+
+
+.buttons:hover, .del-button:hover{color:#ff0;}
+
+
+.green-box
+{
+    padding:25px;
+    color:#fff;
+}
+
+
+
+form label
+{
+    display: block;
+    margin-top:8px;
+}
+
+form input, form textarea
+{
+    border:1px solid #666;
+    padding:5px;
+    font-size:14px;
+}
+
+.table-box
+{
+    border:1px solid #000;
+    padding:15px;
+    background: #f5f5dc;
+    font-size:14px;
+   
+    display: inline-block; 
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+td, th{padding:5px 5px;}
+
+td {margin:0px;}
+
+th {font-weight: bold;font-size:16px;padding-bottom:10px;text-align: left;}
+
+tr:nth-child(even) { background-color:#fff; }
+
+.butcol
+{
+    width:100px;
+}
+
+table a{color:#00f;text-decoration: none;}
+table a:hover{color:#f00;}

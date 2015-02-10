@@ -81,12 +81,12 @@ class AdminUsersController extends \BaseController {
 	{
 	    $input=Input::all();
 	    $user=User::find($id);
-	   	   
+	    $dirty=(Input::get('email')->isDirty())? Input::get('email'):'';
 	    $validation=Validator::make($input, User::$user_edit_rules);
 	    if($validation->passes())
 	    {
-		
-		$user->update($input);
+		dd($user.' '.$dirty);
+		//$user->update($input);
 		return Redirect::route('admin.users');
 	    }
 	    

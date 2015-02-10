@@ -1,10 +1,10 @@
 <?php $__env->startSection('content'); ?>
  
- <div class="form">
-    <h2>Please Login</h2>
+ <div class="green-box" style="width:200px;margin:100px auto 0px auto;">
+    
     <?php echo Form::open(array('route'=>'admin.login.post')); ?>
 
-    
+    <h2>Please Login</h2><br/>
     <?php echo Form::label('username','User Name'); ?>
 
     <?php if($errors->first('username')): ?>
@@ -21,7 +21,7 @@
     <?php endif; ?>
     <?php echo Form::password('password'); ?>
 
-    <br/>
+    <br/><br/>
     <?php echo Form::submit('Log in',array('style'=>'width:100%')); ?>
 
     <?php echo Form::close(); ?>

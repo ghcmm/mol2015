@@ -2,10 +2,10 @@
 
 @section('content')
  
- <div class="form">
-    <h2>Please Login</h2>
-    {{Form::open(array('route'=>'admin.login.post'))}}
+ <div class="green-box" style="width:200px;margin:100px auto 0px auto;">
     
+    {{Form::open(array('route'=>'admin.login.post'))}}
+    <h2>Please Login</h2><br/>
     {{Form::label('username','User Name')}}
     @if($errors->first('username'))
         {{$errors->first('username').'<br/>'}}
@@ -16,7 +16,7 @@
         {{$errors->first('password').'<br/>'}}
     @endif
     {{Form::password('password')}}
-    <br/>
+    <br/><br/>
     {{Form::submit('Log in',array('style'=>'width:100%'))}}
     {{Form::close()}}
  </div> 

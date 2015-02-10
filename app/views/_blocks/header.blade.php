@@ -1,5 +1,5 @@
 <header class="cream-faded-bg">
-    {{html::image('images/logo/logo-black.png',null,array('alt'=>'Maries logo','style'=>'float:left'))}}
+    {{html::image('images/logo/logo-black.png','Maries Logo',array('style'=>'float:left'))}}
         <h1>MARIES</h1>
         <div style="display:inline-block;vertical-align: top; margin-left:50px;">
             opening hours

@@ -74,6 +74,7 @@ class AdminBlocksController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+	
 	public function update($id)
 	{
 		$block = Block::findOrFail($id);
@@ -92,6 +93,19 @@ class AdminBlocksController extends \BaseController {
 		return Redirect::route('admin.blocks');
 	}
 
+	public function toggle($id)
+	{
+		$block = Block::findOrFail($id);
+		$data = Input::all();
+		$newActive=($block->block_active==1)?'0':'1';
+			
+
+		$block->block_active=$newActive;
+		$block->save();
+		return Redirect::route('admin.blocks');
+	}
+	
+	
 	/**
 	 * Remove the specified block from storage.
 	 *
