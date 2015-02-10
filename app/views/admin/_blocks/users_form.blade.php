@@ -2,10 +2,10 @@
 {{$errors->first('username')}}
 {{Form::text('username',null,array('size'=>'40'))}}
 
-{{Form::label('email','Email address')}}
+{{Form::label('email','Email Address')}}
 {{$errors->first('email')}}
 {{Form::text('email',null,array('size'=>'40'))}}
 
-{{Form::label('password','Enter a password')}}
+{{Form::label('password','Password')}}
 {{$errors->first('password')}}
-{{Form::password('password',null,array('size'=>'40'))}}
+{{Form::text('password',null,array('size'=>'40'))}}

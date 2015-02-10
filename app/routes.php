@@ -46,7 +46,11 @@ Route::group(array('prefix'=>'admin'),function(){
 
 Route::group(array('prefix'=>'admin','before'=>'auth'),function(){
 	Route::get('/', array('as'=>'admin.home', 'uses'=>'AdminAuthController@index'));
+	
 	Route::resource('users','AdminUsersController');
+	Route::put('admin/users/{id}/update_username',array('as'=>'admin.users.update_username','uses'=>'AdminUsersController@update_username'));
+	Route::put('admin/users/{id}/update_email',array('as'=>'admin.users.update_email','uses'=>'AdminUsersController@update_email'));
+	Route::put('admin/users/{id}/update_password',array('as'=>'admin.users.update_password','uses'=>'AdminUsersController@update_password'));
 	Route::get('users/',array('as'=>'admin.users','uses'=>'AdminUsersController@index'));
 	Route::resource('categories','AdminCategoriesController');
 	Route::get('categories/',array('as'=>'admin.categories','uses'=>'AdminCategoriesController@index'));

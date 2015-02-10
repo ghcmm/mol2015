@@ -77,21 +77,64 @@ class AdminUsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+	
 	public function update($id)
 	{
 	    $input=Input::all();
 	    $user=User::find($id);
-	    $dirty=(Input::get('email')->isDirty())? Input::get('email'):'';
 	    $validation=Validator::make($input, User::$user_edit_rules);
 	    if($validation->passes())
 	    {
-		dd($user.' '.$dirty);
 		//$user->update($input);
 		return Redirect::route('admin.users');
 	    }
 	    
 	    return Redirect::back()->withInput()->withErrors($validation);
 	}
+	
+	public function update_username($id)
+	{
+	    $input=Input::all();
+	    $user=User::find($id);
+	    $validation=Validator::make($input, User::$user_edit_username);
+	    if($validation->passes())
+	    {
+		$user->update($input);
+		return Redirect::route('admin.users');
+	    }
+	    
+	    return Redirect::back()->withInput()->withErrors($validation);
+	}
+	
+	public function update_email($id)
+	{
+	    $input=Input::all();
+	    $user=User::find($id);
+	    $validation=Validator::make($input, User::$user_edit_email);
+	    if($validation->passes())
+	    {
+		$user->update($input);
+		return Redirect::route('admin.users');
+	    }
+	    
+	    return Redirect::back()->withInput()->withErrors($validation);
+	}
+	
+	public function update_password($id)
+	{
+	    $input=Input::all();
+	    $user=User::find($id);
+	    $validation=Validator::make($input, User::$user_edit_password);
+	    if($validation->passes())
+	    {
+		$input['password']=Hash::make($input['password']);
+		$user->update($input);
+		return Redirect::route('admin.users');
+	    }
+	    
+	    return Redirect::back()->withInput()->withErrors($validation);
+	}
+	
 
 	/**
 	 * Remove the specified resource from storage.

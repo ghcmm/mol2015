@@ -1,22 +1,33 @@
 <?php $__env->startSection('content'); ?>
     
     <div class="green-box" style="width:350px;margin:100px auto 0px  auto;">
-      
-        <?php echo Form::model($user,array('route'=>array('admin.users.update',$user->id),'method'=>'put','class'=>'form')); ?>
-
-        
+              
         <h2>Edit User</h2>
         
-        <?php echo $__env->make('admin._blocks.users_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-        
-        <div style="margin-top:10px;">
-            <?php echo Form::submit('Update',array('class'=>'button')); ?>
+        <?php echo Form::model($user,array('route'=>array('admin.users.update_username',$user->id),'method'=>'put','class'=>'form')); ?>
 
-        </div>
-        
+        <?php echo $__env->make('admin._blocks.users_username_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo Form::submit('Update',array('class'=>'button')); ?>
+
         <?php echo Form::close(); ?>
 
-    
+        
+        <?php echo Form::model($user,array('route'=>array('admin.users.update_email',$user->id),'method'=>'put','class'=>'form')); ?>
+
+        <?php echo $__env->make('admin._blocks.users_email_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo Form::submit('Update',array('class'=>'button')); ?>
+
+        <?php echo Form::close(); ?>
+
+        
+        <?php echo Form::model($user,array('route'=>array('admin.users.update_password',$user->id),'method'=>'put','class'=>'form')); ?>
+
+        <?php echo $__env->make('admin._blocks.users_password_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo Form::submit('Update',array('class'=>'button')); ?>
+
+        <?php echo Form::close(); ?>
+
+        
     </div>
     
 <?php $__env->stopSection(); ?>

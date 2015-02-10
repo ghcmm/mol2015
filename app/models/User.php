@@ -27,8 +27,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public static $user_edit_rules=array(
 		'username'=>'required|min:4',
 		'email'=>'required|unique:users',
-		'password'=>'min:6'
+		'password'=>'requires|min:6'
 	);
+	
+	public static $user_edit_username=array('username'=>'required|min:4');
+	public static $user_edit_email=array('email'=>'required|email|unique:users');
+	public static $user_edit_password=array('password'=>'required|min:6');
+	
+	
 
 	/**
 	 * The database table used by the model.
