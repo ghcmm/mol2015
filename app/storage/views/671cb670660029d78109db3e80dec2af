@@ -30,7 +30,8 @@
 <br/>
 
 <?php echo Form::label('block_active','Display block on screen ',array('style'=>'display:inline-block; width:280px;')); ?><?php echo Form::checkbox('block_active'); ?><br>
-<?php echo Form::label('block_index','Block Display Number (1 Highest)',array('style'=>'display:inline-block; width:280px;')); ?><?php echo Form::number('block_index',1,array('style'=>'width:40px;')); ?><br>
+<?php echo Form::label('notice','Display as a notice ',array('style'=>'display:inline-block; width:280px;')); ?><?php echo Form::checkbox('notice'); ?><br>
+<?php echo Form::label('block_index','Block Display Number (1 Highest)',array('style'=>'display:inline-block; width:280px;')); ?><?php echo Form::number('block_index',null,array('style'=>'width:40px;')); ?><br>
 <script>
     CKEDITOR.replace('editor1', {
         toolbar:

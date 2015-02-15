@@ -9,8 +9,8 @@ class AdminBlocksController extends \BaseController {
 	 */
 	public function index()
 	{
-		$blocks = Block::all();
-
+		//$blocks = Block::all();
+		$blocks = Block::orderBy('block_index','asc')->get();
 		return View::make('admin.blocks.index', compact('blocks'));
 	}
 
@@ -93,7 +93,7 @@ class AdminBlocksController extends \BaseController {
 		return Redirect::route('admin.blocks');
 	}
 
-	public function toggle($id)
+	public function toggle_visable($id)
 	{
 		$block = Block::findOrFail($id);
 		$data = Input::all();
@@ -101,6 +101,18 @@ class AdminBlocksController extends \BaseController {
 			
 
 		$block->block_active=$newActive;
+		$block->save();
+		return Redirect::route('admin.blocks');
+	}
+	
+	public function toggle_notice($id)
+	{
+		$block = Block::findOrFail($id);
+		$data = Input::all();
+		$newNotice=($block->notice==1)?'0':'1';
+			
+
+		$block->notice=$newNotice;
 		$block->save();
 		return Redirect::route('admin.blocks');
 	}

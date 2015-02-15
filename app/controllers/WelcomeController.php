@@ -4,7 +4,8 @@ class WelcomeController extends BaseController{
     
     public function index(){
         $data=new stdClass();
-        $blocks=DB::table('blocks')->where('block_active','1')->get();
+        //$blocks=DB::table('blocks')->where('block_active','1')->get();
+        $blocks=Block::where('block_active','1')->orderBy('block_index','asc')->get();
         //dd($blocks);
         $data->header='Welcome to ';
         $data->title='Home page'; 

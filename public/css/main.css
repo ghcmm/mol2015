@@ -154,7 +154,7 @@ main
 .display_block
 {
     color:#fff;
-    padding:10px 15px;
+    padding:15px;
     margin:5px 0px;
 }
 
@@ -206,3 +206,5 @@ form label
     margin:0px 15px 0px 0px;
     padding:5px 10px;
 }
+
+.butcol{max-width:125px;}

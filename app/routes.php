@@ -63,7 +63,8 @@ Route::group(array('prefix'=>'admin','before'=>'auth'),function(){
 	
 	Route::resource('blocks','AdminBlocksController');
 	Route::get('blocks/',array('as'=>'admin.blocks','uses'=>'AdminBlocksController@index'));
-	Route::put('blocks/{id}/toggle',array('as'=>'admin.blocks.toggle','uses'=>'AdminBlocksController@toggle'));
+	Route::put('blocks/{id}/toggle_visable',array('as'=>'admin.blocks.toggle_visable','uses'=>'AdminBlocksController@toggle_visable'));
+	Route::put('blocks/{id}/toggle_notice',array('as'=>'admin.blocks.toggle_notice','uses'=>'AdminBlocksController@toggle_notice'));
 	
 	
 	

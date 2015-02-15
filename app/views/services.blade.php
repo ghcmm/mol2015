@@ -25,7 +25,7 @@
                 @endif
                 
                     <span style="display:inline-block;margin-left:60px;width:200px;">{{$service->service_name}}</span>
-                    <span>£</span>
+                    <span> From  £</span>
                     <span style="display:inline-block;width:60px;text-align:right;">{{number_format($service->price,2)}}</span>
                     <br/>
                @endforeach 

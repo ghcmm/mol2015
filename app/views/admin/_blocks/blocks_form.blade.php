@@ -24,7 +24,8 @@
 <br/>
 
 {{Form::label('block_active','Display block on screen ',array('style'=>'display:inline-block; width:280px;'))}}{{Form::checkbox('block_active')}}<br>
-{{Form::label('block_index','Block Display Number (1 Highest)',array('style'=>'display:inline-block; width:280px;'))}}{{Form::number('block_index',1,array('style'=>'width:40px;'))}}<br>
+{{Form::label('notice','Display as a notice ',array('style'=>'display:inline-block; width:280px;'))}}{{Form::checkbox('notice')}}<br>
+{{Form::label('block_index','Block Display Number (1 Highest)',array('style'=>'display:inline-block; width:280px;'))}}{{Form::number('block_index',null,array('style'=>'width:40px;'))}}<br>
 <script>
     CKEDITOR.replace('editor1', {
         toolbar:

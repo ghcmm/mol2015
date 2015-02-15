@@ -30,13 +30,13 @@
     <div class="table-box">
         @if(count($blocks)>0)
         <table>
-            <tr><th>Block Name</th><th>Block Contents</th><th>Visable</th></tr>
+            <tr><th style="width:180px;">Block Name</th><th>Block Contents</th><th>Visable</th><th>Notice</th><th>Index</th></tr>
                 @foreach($blocks as $block) 
                     <tr>
                         <td>{{link_to_route('admin.blocks.show',$block->block_title,$block->id)}}</td>
-                        <td>{{{$block->block_text}}}</td>
+                        <td>{{$block->block_text}}</td>
                         <td style="text-align:center">
-                        {{Form::model($block,array('route'=>array('admin.blocks.toggle',$block->id),'method'=>'put'))}}
+                        {{Form::model($block,array('route'=>array('admin.blocks.toggle_visable',$block->id),'method'=>'put'))}}
                         @if($block->block_active==1)
                             <?php $butt='ticked';?>
                         @else
@@ -46,7 +46,20 @@
                         {{ Form::close() }}
                         </td>
                         
-                        <td style="butcol">
+                        <td style="text-align:center">
+                        {{Form::model($block,array('route'=>array('admin.blocks.toggle_notice',$block->id),'method'=>'put'))}}
+                        @if($block->notice==1)
+                            <?php $butt='ticked';?>
+                        @else
+                            <?php $butt='unticked';?>
+                        @endif                    
+                        {{Form::submit('',array('class'=>$butt)) }}
+                        {{ Form::close() }}
+                        </td>   
+
+                        <td style="text-align:center">{{$block->block_index}}</td>
+
+                        <td class="butcol">
                             {{link_to_route('admin.blocks.edit','Edit',array($block->id),array('class'=>'buttons'))}}
     
                             {{ Form::open(array('route'=>array('admin.blocks.destroy',$block->id), 'method'=>'delete','class'=>'del-butt-form')) }}
