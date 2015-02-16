@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Maries of Ludlow </title>
+    <title>{{$data->header}} Maries of Ludlow</title>
     {{ HTML::style('css/main.css') }}
     {{ HTML::script('libs/js/jquery-1.10.1.min.js')}}
     
@@ -15,8 +15,10 @@
     @include('_blocks.header')
 
     @yield('content')
-
-    @include('_blocks.footer')
+   
+    @if ($data->title=="Home page")
+        @include('_blocks.footer')
+    @endif
 
 </body>
 </html>

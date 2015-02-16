@@ -7,14 +7,14 @@ class WelcomeController extends BaseController{
         //$blocks=DB::table('blocks')->where('block_active','1')->get();
         $blocks=Block::where('block_active','1')->orderBy('block_index','asc')->get();
         //dd($blocks);
-        $data->header='Welcome to ';
+        $data->header='Welcome to';
         $data->title='Home page'; 
         return View::make('home',compact('data','blocks'));
     }
     
     public function about(){
         $data=new stdClass();
-        $data->header='About ';
+        $data->header='About';
         $data->title='About Marie';
         return View::make('about',compact('data'));
     }
@@ -22,7 +22,7 @@ class WelcomeController extends BaseController{
     public function services(){
         //$services=Service::with('category');
         $data=new stdClass();
-        $data->header='Services ';
+        $data->header='Services at';
         $data->title='Services page';
         //$services=Service::all();
         $services=Service::service_list();
@@ -31,7 +31,7 @@ class WelcomeController extends BaseController{
     
     public static function contact(){
         $data=new stdClass();
-        $data->header='How to contact ';
+        $data->header='How to contact';
         $data->title='How to contact us';
         return View::make('contact',compact('data'));
     }

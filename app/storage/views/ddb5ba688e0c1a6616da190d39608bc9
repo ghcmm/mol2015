@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Maries of Ludlow </title>
+    <title><?php echo $data->header; ?> Maries of Ludlow</title>
     <?php echo HTML::style('css/main.css'); ?>
 
     <?php echo HTML::script('libs/js/jquery-1.10.1.min.js'); ?>
@@ -17,8 +17,10 @@
     <?php echo $__env->make('_blocks.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
     <?php echo $__env->yieldContent('content'); ?>
-
-    <?php echo $__env->make('_blocks.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+   
+    <?php if($data->title=="Home page"): ?>
+        <?php echo $__env->make('_blocks.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php endif; ?>
 
 </body>
 </html>

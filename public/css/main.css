@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo);
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
 
 @font-face{
     font-family: maries;
@@ -42,6 +43,23 @@ background: linear-gradient(to bottom,  rgba(255,252,207,0.8) 0%,rgba(255,255,20
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccfffccf', endColorstr='#ccffffcc',GradientType=0 ); /* IE6-8 */
 }
 
+
+
+footer
+{
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM5NDU0MSIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM0JSIgc3RvcC1jb2xvcj0iIzM5NDU0MSIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM5NDU0MSIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  rgba(57,69,65,0) 0%, rgba(57,69,65,0.8) 34%, rgba(57,69,65,0.8) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,69,65,0)), color-stop(34%,rgba(57,69,65,0.8)), color-stop(100%,rgba(57,69,65,0.8))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(57,69,65,0) 0%,rgba(57,69,65,0.8) 34%,rgba(57,69,65,0.8) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(57,69,65,0) 0%,rgba(57,69,65,0.8) 34%,rgba(57,69,65,0.8) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(57,69,65,0) 0%,rgba(57,69,65,0.8) 34%,rgba(57,69,65,0.8) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(57,69,65,0) 0%,rgba(57,69,65,0.8) 34%,rgba(57,69,65,0.8) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00394541', endColorstr='#cc394541',GradientType=0 ); /* IE6-8 */
+
+}
+
+
 dark-green, form, nav a:hover, .display_block
 {
     background:#394541
@@ -50,7 +68,7 @@ dark-green, form, nav a:hover, .display_block
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: maries !important;
+    font-family: Cinzel !important;
     /*font-weight:normal;*/
     margin:0px;
     padding:0px;
@@ -63,20 +81,21 @@ body
 {
     margin:0px;
     padding:0px;
-   
 }
 
 header
 {
     min-height:90px;
     padding:15px 15px 0px 15px;
+    position: relative;
+    
 }
 
 
 
 header h1
 {
-    font-family: maries;
+    font-family: Cinzel;
     font-weight: normal;
     font-size:100px;
     display: inline-block;
@@ -103,7 +122,7 @@ header .infobox span
 {
     display: block;
     margin:6px 0px;
-    font-family: maries;
+    font-family: Cinzel;
     font-size:22px;
     font-weight: bold;
     
@@ -132,7 +151,7 @@ nav a
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    font-family: maries;
+    font-family: Cinzel;
     font-weight:bold;
     color:#000;
 }
@@ -146,10 +165,34 @@ nav a:hover
 
 main
 {
+    position: relative;
     max-width:960px;
     margin:45px  auto;
     color:#000;
+   
 }
+
+footer
+{
+    font-size:0.8em;
+    text-align: right;
+    position:fixed;
+    width:100% !important;
+    bottom:0px;
+    margin:0px;
+    width: inherit;
+}
+
+footer a
+{
+    text-decoration: none;
+    color:#fff;
+    padding:5px 15px;
+    display: inline-block;
+    padding-bottom:1px;
+}
+
+
 
 .display_block
 {
