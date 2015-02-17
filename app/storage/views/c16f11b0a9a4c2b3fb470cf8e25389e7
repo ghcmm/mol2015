@@ -3,9 +3,19 @@
             <div class="heading">SERVICES</div>
             <div class="link"><?php echo link_to_route('admin.services.create','Add a new service'); ?></div>
         </div>
+
+        <?php if(count($services)>0): ?> 
         <div class="table-box">
             <table>
-                <tr style="text-align:left"><th>Service</th><th>Price</th><th>Main Category</th><th>Sub Category</th></tr>
+                <thead>
+                    <tr style="text-align:left;padding:-5px;">
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Main Category</th>
+                        <th>Sub Category</th>
+                        <th></th>
+                    </tr>
+                </thead> 
                 <?php foreach($services as $service): ?>
                     <tr>
                         <td style="padding-right:15px;"><?php echo $service->service_name; ?></td>
@@ -22,7 +32,7 @@
                             
                             <?php echo Form::open(array('route'=>array('admin.services.destroy',$service->id), 'method'=>'delete','class'=>'del-butt-form')); ?>
 
-                            <?php echo Form::submit('Delete',array('class'=>'del-button')); ?>
+                            <?php echo Form::submit('Delete',array('class'=>'del-button','id'=>'delete')); ?>
 
                             <?php echo Form::close(); ?>
 
@@ -32,5 +42,26 @@
                 <?php endforeach; ?>
             </table>
         </div>
+        <?php else: ?>
+            <h2>No services Found</h2>
+        <?php endif; ?>
+        
+        
+        <script>
+            $(document).ready(function(){
+            
+                $(document).on('submit',function(){
+                    return confirm('Are you sure delete this entery?')
+                });
+                
+                 $("table").dataTable({
+                    "columnDefs":
+                    [
+                        {"orderable":false,"targets":4}
+                    ]
+                });
+            });
+            
+        </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

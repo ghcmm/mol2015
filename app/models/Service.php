@@ -33,4 +33,16 @@ class Service extends \Eloquent {
 		return $servicelist;
 	}
 	
+	public static function service_list_sort(){
+		$newsort=Input::all();
+		
+		$servicelist=Service::join('categories as mcats','mcats.id','=','cat_id')
+		->leftjoin('categories as scats','scats.id','=','subcat_id')
+		->orderBy($colname,$sortorder)
+		->select('services.*','mcats.name as main_cat','scats.name as sub_cat')
+		->get();
+		
+		return $servicelist;
+	}
+	
 }

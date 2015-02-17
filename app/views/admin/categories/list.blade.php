@@ -6,9 +6,13 @@
         <div class="heading"> CATEGORIES</div>
         <div class="link">{{link_to_route('admin.categories.create','Add a category')}}</div>
     </div>
+    
+    @if(count($cats)>0)
     <div class="table-box">
         <table>
-            <tr style="text-align:left"><th>Category Name</th></tr>
+            <thead>
+                <tr style="text-align:left"><th>Category Name</th></tr>
+            </thead>
             @foreach($cats as $cat)
                 <tr>
                     <td style="padding-right:15px;">{{$cat->name}}</td>
@@ -23,4 +27,24 @@
             @endforeach
         </table>
     </div>
+        
+    @else
+        <h2>No Categories Found</h2>
+    @endif
+    
+     <script>
+            $(document).ready(function(){
+            
+                $(document).on('submit',function(){
+                    return confirm('Are you sure delete this entery?')
+                });
+                
+                 $("table").dataTable({
+                    "columnDefs":
+                    [
+                        {"orderable":false,"targets":1}
+                    ]
+                });
+            });   
+    </script>
 @stop

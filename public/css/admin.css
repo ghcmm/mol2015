@@ -1,11 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo);
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
 
 @font-face{
     font-family: maries;
     src:url('fonts/trajax.ttf');
 }
 
-nav, .main_menu, .box, .buttons, .header-link-box .link, .green-box
+nav, .main_menu, .box, .buttons, .header-link-box .link, .green-box, #logo:hover
 {
     background:#3B6351;/* Green background*/
 }
@@ -46,9 +47,9 @@ header
 
 header h1
 {
-    font-weight: normal;
+    font-weight:normal;
     padding:10px 25px 5px 25px;
-    font-family: maries !important;
+    font-family: Cinzel !important;
    
 }
 
@@ -57,6 +58,12 @@ header h1
     background: #fff;
     color:#000;
    
+}
+
+#logo:hover
+{
+    color:#fff;
+    
 }
 
 nav
@@ -140,6 +147,9 @@ main
     padding:5px 8px;
 }
 
+
+
+
 .box, .buttons
 {
     color:#fff;
@@ -213,7 +223,7 @@ td, th{padding:5px 5px;}
 
 td {margin:0px;}
 
-th {font-weight: bold;font-size:16px;padding-bottom:10px;text-align: left;}
+th {font-weight: bold;font-size:16px;padding-bottom:10px;text-align: left;background:#3B6351;}
 
 tr:nth-child(even) { background-color:#fff; }
 

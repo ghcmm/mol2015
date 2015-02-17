@@ -8,4 +8,4 @@
 
 {{Form::label('password','Password')}}
 {{$errors->first('password')}}
-{{Form::text('password',null,array('size'=>'40'))}}
+{{Form::password('password',null,array('size'=>'40'))}}

@@ -26,52 +26,71 @@
         
     </style>
         
-        
-    <div class="table-box">
-        @if(count($blocks)>0)
-        <table>
-            <tr><th style="width:180px;">Block Name</th><th>Block Contents</th><th>Visable</th><th>Notice</th><th>Index</th></tr>
-                @foreach($blocks as $block) 
-                    <tr>
-                        <td>{{link_to_route('admin.blocks.show',$block->block_title,$block->id)}}</td>
-                        <td>{{$block->block_text}}</td>
-                        <td style="text-align:center">
-                        {{Form::model($block,array('route'=>array('admin.blocks.toggle_visable',$block->id),'method'=>'put'))}}
-                        @if($block->block_active==1)
-                            <?php $butt='ticked';?>
-                        @else
-                            <?php $butt='unticked';?>
-                        @endif                    
-                        {{Form::submit('',array('class'=>$butt)) }}
-                        {{ Form::close() }}
-                        </td>
-                        
-                        <td style="text-align:center">
-                        {{Form::model($block,array('route'=>array('admin.blocks.toggle_notice',$block->id),'method'=>'put'))}}
-                        @if($block->notice==1)
-                            <?php $butt='ticked';?>
-                        @else
-                            <?php $butt='unticked';?>
-                        @endif                    
-                        {{Form::submit('',array('class'=>$butt)) }}
-                        {{ Form::close() }}
-                        </td>   
-
-                        <td style="text-align:center">{{$block->block_index}}</td>
-
-                        <td class="butcol">
-                            {{link_to_route('admin.blocks.edit','Edit',array($block->id),array('class'=>'buttons'))}}
     
-                            {{ Form::open(array('route'=>array('admin.blocks.destroy',$block->id), 'method'=>'delete','class'=>'del-butt-form')) }}
-                            {{ Form::submit('Delete',array('class'=>'del-button')) }}
-                            {{ Form::close() }}
-                        </td>
-                            
-                    </tr>
-                @endforeach
-            </table>
-        @else
-            <h2>No Blocks found</h2>
-        @endif
+    @if(count($blocks)>0)
+    <div class="table-box">
+        <table>
+            <thead>
+                <tr><th style="width:180px;">Block Name</th><th>Block Contents</th><th style="width:70px;">Visable</th><th style="width:70px;">Notice</th><th style="width:70px;">Index</th><th></th></tr>
+            </thead>
+            @foreach($blocks as $block) 
+                <tr>
+                    <td>{{link_to_route('admin.blocks.show',$block->block_title,$block->id)}}</td>
+                    <td>{{$block->block_text}}</td>
+                    <td style="text-align:center">
+                    {{Form::model($block,array('route'=>array('admin.blocks.toggle_visable',$block->id),'method'=>'put'))}}
+                    @if($block->block_active==1)
+                        <?php $butt='ticked';?>
+                    @else
+                        <?php $butt='unticked';?>
+                    @endif                    
+                    {{Form::submit('',array('class'=>$butt)) }}
+                    {{ Form::close() }}
+                    </td>
+                    
+                    <td style="text-align:center">
+                    {{Form::model($block,array('route'=>array('admin.blocks.toggle_notice',$block->id),'method'=>'put'))}}
+                    @if($block->notice==1)
+                        <?php $butt='ticked';?>
+                    @else
+                        <?php $butt='unticked';?>
+                    @endif                    
+                    {{Form::submit('',array('class'=>$butt)) }}
+                    {{ Form::close() }}
+                    </td>   
+
+                    <td style="text-align:center">{{$block->block_index}}</td>
+
+                    <td class="butcol">
+                        {{link_to_route('admin.blocks.edit','Edit',array($block->id),array('class'=>'buttons'))}}
+
+                        {{ Form::open(array('route'=>array('admin.blocks.destroy',$block->id), 'method'=>'delete','class'=>'del-butt-form')) }}
+                        {{ Form::submit('Delete',array('class'=>'del-button')) }}
+                        {{ Form::close() }}
+                    </td>
+                        
+                </tr>
+            @endforeach
+        </table>
+        
     </div>
+    @else
+        <h2>No Display Blocks Found</h2>
+    @endif   
+    
+     <script>
+        $(document).ready(function(){
+        
+            $(document).on('submit',function(){
+                return confirm('Are you sure delete this entery?')
+            });
+            
+             $("table").dataTable({
+                "columnDefs":
+                [
+                    {"orderable":false,"targets":5}
+                ]
+            });
+        });   
+    </script>
 @stop

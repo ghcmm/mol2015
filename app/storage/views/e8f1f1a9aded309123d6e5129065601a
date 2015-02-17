@@ -5,16 +5,15 @@
 <?php echo Form::text('username',null,array('size'=>'40')); ?>
 
 
-<?php echo Form::label('email','Email address'); ?>
+<?php echo Form::label('email','Email Address'); ?>
 
 <?php echo $errors->first('email'); ?>
 
 <?php echo Form::text('email',null,array('size'=>'40')); ?>
 
 
-<?php echo Form::label('password','Enter a password'); ?>
+<?php echo Form::label('password','Password'); ?>
 
 <?php echo $errors->first('password'); ?>
 
 <?php echo Form::password('password',null,array('size'=>'40')); ?>
-

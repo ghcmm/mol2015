@@ -11,7 +11,13 @@ class AdminServicesController extends \BaseController {
     public function index()
     {
 	$services=Service::service_list();
-	return View::make('admin.services.list',compact('cats_list','services'));
+	return View::make('admin.services.list',compact('services'));
+    }
+    
+    public function column_sort()
+    {
+	$services=Service::service_list();
+	return View::make('admin.services.list',compact('services'));
     }
     
     public function create()

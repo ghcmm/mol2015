@@ -145,7 +145,8 @@ class AdminUsersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+	    User::destroy($id);
+	    return Redirect::route('admin.users');
 	}
 
 }

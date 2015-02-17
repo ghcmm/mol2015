@@ -1,6 +1,6 @@
 <header>
     <div id="logo" style="display:inline-block">
-	<h1>Maries</h1>
+	<h1>MARIES</h1>
 	
     </div>
     <div style="display:inline-block;">
@@ -18,8 +18,12 @@
 	    {{link_to_route('admin.categories.index','Categories')}}
 	    {{link_to_route('admin.blocks','Blocks')}}
 	    {{link_to_route('admin.logout','Logout')}}
+	    {{link_to_route('home','View Site',null,array('target'=>'_blank'))}}
 	    @endif
 	</nav>
+	<script>
+	    $('#logo').click(function(){window.location.href='/'});
+	</script>
 	
     </div>
   

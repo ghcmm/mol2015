@@ -128,7 +128,7 @@ class AdminBlocksController extends \BaseController {
 	{
 		Block::destroy($id);
 
-		return Redirect::route('blocks.index');
+		return Redirect::route('admin.blocks');
 	}
 	
 	public function bert()

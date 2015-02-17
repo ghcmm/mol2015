@@ -3,13 +3,19 @@
             <div class="heading">USERS</div>
             <div class="link"><?php echo link_to_route('admin.users.create','Add a new user'); ?></div>
         </div>
+            
         <?php if(count($users)>0): ?>
         <div class="table-box">
             <table>
-                <tr style="text-align:left;"><th>User Name</th><th>Email</th></tr>
+                <thead>
+                    <tr style="text-align:left;">
+                        <th>User Name</th><th>Email</th><th></th>
+                    </tr>
+                </thead>
                 <?php foreach($users as $user): ?>
+                    
                     <tr>
-                        <td style="padding-right:15px;width:120px;"><?php echo $user->username; ?></td>
+                        <td name="username" style="padding-right:15px;width:120px;"><?php echo $user->username; ?></td>
                         <td style="padding-right:15px;"><?php echo $user->email; ?></td>
                         <td class="butcol">
             
@@ -24,14 +30,31 @@
           
                         </td>
                     </tr>
+                        
                 <?php endforeach; ?>
                 
                 
             </table>    
         </div>
         <?php else: ?>
-            <h2>No User Found</h2>
+            <h2>No Users Found</h2>
         <?php endif; ?>
+        
+        <script>
+            $(document).ready(function(){
+            
+                $(document).on('submit',function(){
+                    return confirm('Are you sure delete this entery?')
+                });
+                
+                 $("table").dataTable({
+                    "columnDefs":
+                    [
+                        {"orderable":false,"targets":2}
+                    ]
+                });
+            });
+        </script>
     
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin._layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
