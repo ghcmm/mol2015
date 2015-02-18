@@ -60,11 +60,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00394541', e
 }
 
 
-dark-green, form, nav a:hover, .display_block
+dark-green, form, .form_success, nav a:hover, .display_block
 {
     background:#394541
 }
 
+.form_success
+{
+    color:#fff;
+    text-align: center
+}
+.form_success span
+{
+    display: block;
+    height: inherit;
+    margin-top:50%;
+    margin-bottom:auto;
+}
+
+.form_success p{padding:0px;margin:0px;}
+.form_success h3{margin:5px 0px;}
 
 h1,h2,h3,h4,h5,h6
 {
@@ -103,6 +118,7 @@ header h1
     margin:0px;
     padding:0px 0px 0px 15px;
     color:#000;
+    margin-top:-15px;
 }
 
 header img
@@ -115,6 +131,7 @@ header .infobox
     display:inline-block;
     vertical-align: top;
     margin-left:50px;
+    margin-top:10px;
     
 }
 
@@ -215,11 +232,13 @@ article
     border:1px solid #888;
 }
 
-form
+form, .form_success
 {
     width:350px;
+    min-height: 600px;
     padding:25px;
     border:1px solid #888;
+    
 }
 
 textarea, input

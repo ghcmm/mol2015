@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/set_roles',function()
+/*Route::get('/set_roles',function()
 {
     $owner = new Role;
     $owner->name = 'Owner';
@@ -23,7 +23,7 @@ Route::get('/set_roles',function()
     $admin->save();
     
     return 'Setup done';
-});
+});*/
 
 Route::group(array('prefix'=>'/'),function(){
     Route::get('/', array('as'=>'home', 'uses'=>'WelcomeController@index'));

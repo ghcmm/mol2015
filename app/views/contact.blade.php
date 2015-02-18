@@ -3,12 +3,24 @@
 @section('content')
     <main>
         <div style="float:left;">
+           
+            @if ($data->show_form)
+                
+                {{Form::open(array('route'=>array('form.validation'),'method'=>'put','class'=>'form','id'=>'contact'))}}
+                @include('_blocks.form')               
+                {{Form::close()}}
+            @else
+               
+                <div class="form_success">
+                    <span>
+                        <h1>Your message has been sent to Marie successfully</h1>
+                        <br/>
+                        <p>A copy has been sent to<h3>{{Input::get('email')}}</h2>for your reference</p>
+                    </span>
+                </div>
             
-            {{Form::open(array('route'=>array('form.validation'),'method'=>'put','class'=>'form','id'=>'contact'))}}
-            
-            @include('_blocks.form')
-            
-            {{Form::close()}}
+            @endif
+
         </div>
         <article class="contactus" style="margin-left:420px;">
             <h2 class="title">How to contact</h2>

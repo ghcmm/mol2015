@@ -1,13 +1,26 @@
 <?php $__env->startSection('content'); ?>
     <main>
         <div style="float:left;">
-            
-            <?php echo Form::open(array('route'=>array('form.validation'),'method'=>'put','class'=>'form','id'=>'contact')); ?>
+           
+            <?php if($data->show_form): ?>
+                
+                <?php echo Form::open(array('route'=>array('form.validation'),'method'=>'put','class'=>'form','id'=>'contact')); ?>
 
+                <?php echo $__env->make('_blocks.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>               
+                <?php echo Form::close(); ?>
+
+            <?php else: ?>
+               
+                <div class="form_success">
+                    <span>
+                        <h1>Your message has been sent to Marie successfully</h1>
+                        <br/>
+                        <p>A copy has been sent to<h3><?php echo Input::get('email'); ?></h2>for your reference</p>
+                            <pre style="text-align:left"><?php echo $data->maries_message; ?></pre>
+                    </span>
+                </div>
             
-            <?php echo $__env->make('_blocks.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-            
-            <?php echo Form::close(); ?>
+            <?php endif; ?>
 
         </div>
         <article class="contactus" style="margin-left:420px;">
