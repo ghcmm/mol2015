@@ -19,10 +19,8 @@ class AdminAuthController extends BaseController
                 return Redirect::back()->withErrors($validator)->withInput();
         }
         if (Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')))){
-            //dd($data);
             return Redirect::intended('admin');
         }
-        dd('ouch',$data);
         return Redirect::route('admin.login');
     }
     
