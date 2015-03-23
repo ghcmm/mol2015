@@ -1,3 +1,3 @@
 # mol2015lar
 
-Example Laravel CMS for local clothing alterations firm
+Example Laravel 4 CMS for local clothing alterations firm
